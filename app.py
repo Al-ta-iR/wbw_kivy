@@ -1,6 +1,7 @@
 from kivy.app import App
-from kivy.uix.label import Label
 from kivy.uix.button import Button
+from kivy.uix.label import Label
+from kivy.uix.textinput import TextInput
 # from kivy.uix.codeinput import CodeInput
  
 # from kivy.config import Config
@@ -12,7 +13,8 @@ from kivy.uix.floatlayout import FloatLayout
 
 class MainApp(App):
     def build(self):
-        fl = FloatLayout(size = (300, 300))
+        self.title = 'WbW'
+        fl = FloatLayout(size = (50, 50))
 
         fl.add_widget(Button(
             text="Кнопка", 
@@ -28,8 +30,15 @@ class MainApp(App):
                       size_hint=(.5, .5),
                       pos_hint={'center_x': .5, 'center_y': .5}
         ))
+
+        fl.add_widget(TextInput(
+            text='Hello world',
+            size_hint=(.15, .05),
+            pos_hint={'center_x': .15, 'center_y': .05}
+        ))
         return fl
         # return label
+
     
     def btn_press(self, instance):
         print("Кнопка нажата")
