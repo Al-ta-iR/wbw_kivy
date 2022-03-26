@@ -10,7 +10,7 @@ Config.set('graphics', 'width', '55'); # высота окна
 Config.set('graphics', 'height', '55'); # ширина окна
 
 from kivy.uix.floatlayout import FloatLayout
-
+#
 class MainApp(App):
     def build(self):
         self.icon = 'source/favicon.png'
